@@ -163,25 +163,7 @@ ID int PRIMARY KEY IDENTITY (1, 1),
 Stage NVARCHAR(max)
 )
 
-delete from MemberContact where ID = 2
-insert into MemberContact(MemberID,PhoneNumber) values ('8', '5342345665')
-insert into MemberEmail(MemberID, Email) values ('3', 'member@gmail.com')
-insert into Personel (FirstName, LastName) values ('Ali', 'Toprak')
-insert into Product(MemberID) values (5)
-insert into Process (Stage) values ('Tesim edildi')
-insert into MemberReport (ProductID, Report) 
 
-insert into MemberAdress(MemberID,City,District,Adress) values (2,'Erzurum','Palandöken', 'Bilmem Ne Caddesi 2/2')
-
-insert into Categorie (Fault) values ('Klavyem Bozuk')
-
-insert into MemberReport (ProductID,Report) values (3, 'Ekran Kaıyor')
-
-insert into ProductCategorie (ProductID, CategoriID) values (3,2)
-
-insert into Record (MemberID, ProductID, Price) values (3, 2, 150)
-
-insert into TechnicalReport (ProductID, PersonnelID , Report, DeliveryDate) values (3, 1, 'Ekran değişimi gerekiyor' , '2010-06-11')
 
 
 --Ürün eklendiğinde ilk servis aşamasına atayan trigger
@@ -201,14 +183,7 @@ begin
 insert into Member(FirstName, LastName, Password) values (@FirstName, @LastName, @Password)
 end
 select * from Member
---sp_AddMember 'Ali', 'Çelik', 'Bartın5678'
---sp_AddMember 'Bilal' ,'Köse', 'Katamonu5432'
---sp_AddMember 'Selçuk', 'Çığ', 'Ceyhan23545'
---sp_AddMember 'Rıdvan', 'Çelik', 'Yozgat3452'
---sp_AddMember 'Elif', 'Baklı', 'Bursa54543'
---sp_AddMember 'Burçin', 'Sözken', 'İzmir3221'
---sp_AddMember 'Elvan', 'Karagöz', 'Muğla3445'
---sp_AddMember 'Emre', 'Kestirmez', 'Batmanlı45543'
+
 
 --Güncelleme İşlemi
 
